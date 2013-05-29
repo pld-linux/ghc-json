@@ -2,7 +2,7 @@
 Summary:	Support for serialising Haskell to and from JSON
 Name:		ghc-%{pkgname}
 Version:	0.7
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
@@ -25,6 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautocompressdoc	*.haddock
 
 %description
+This library provides a parser and pretty printer for converting
+between Haskell values and JSON.
 
 %package prof
 Summary:	Profiling %{pkgname} library for GHC
