@@ -2,7 +2,7 @@
 Summary:	Support for serialising Haskell to and from JSON
 Name:		ghc-%{pkgname}
 Version:	0.7
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
