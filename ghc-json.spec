@@ -6,13 +6,13 @@
 Summary:	Support for serialising Haskell to and from JSON
 Summary(pl.UTF-8):	Obsługa serializacji Haskella do i z formatu JSON
 Name:		ghc-%{pkgname}
-Version:	0.7
-Release:	4
+Version:	0.10
+Release:	1
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/json
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	bfa338cafdc88b0f6c9897bb4917e48a
+# Source0-md5:	a30006f2e673b29852be7c001cfc2bfa
 URL:		http://hackage.haskell.org/package/json
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-array
@@ -117,15 +117,18 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES %{name}-%{version}-doc/*
 %{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/HSjson-%{version}.o
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}.a
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}-*.so
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}-*.a
+%exclude %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}-*_p.a
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/JSON
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/JSON/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/JSON/*.dyn_hi
 
 %files prof
 %defattr(644,root,root,755)
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}_p.a
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSjson-%{version}-*_p.a
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/*.p_hi
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Text/JSON/*.p_hi
