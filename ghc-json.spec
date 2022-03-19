@@ -7,7 +7,7 @@ Summary:	Support for serialising Haskell to and from JSON
 Summary(pl.UTF-8):	Obsługa serializacji Haskella do i z formatu JSON
 Name:		ghc-%{pkgname}
 Version:	0.10
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/json
